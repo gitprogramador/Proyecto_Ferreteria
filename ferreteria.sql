@@ -114,7 +114,8 @@ CREATE TABLE `productos` (
   `idProductos` int NOT NULL AUTO_INCREMENT primary key,
   `NombreProducto` varchar(145) NOT NULL,
   `Descripcion` varchar(255) NOT NULL,  -- Aumenté la longitud de Descripción
-  `Precio` decimal(9,2) NOT NULL,
+  `Precio_compra` decimal(9,2) NOT NULL,
+  `Precio_venta` decimal(9,2) NOT NULL,
   `Stock` int NOT NULL,  -- Cambié a int para representar cantidad de stock
   `FechaRegistro` date NOT NULL,  -- Cambié a date para mayor precisión
   `TipoProducto_idTipoProducto` int NOT NULL,

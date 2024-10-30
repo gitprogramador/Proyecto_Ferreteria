@@ -66,6 +66,18 @@ namespace Proyecto_Ferreteria.base_datos_ferreteria
             get { return fTipoProducto_idTipoProducto; }
             set { SetPropertyValue<Tipoproducto>(nameof(TipoProducto_idTipoProducto), ref fTipoProducto_idTipoProducto, value); }
         }
+        decimal fPrecio_compra;
+        public decimal Precio_compra
+        {
+            get { return fPrecio_compra; }
+            set { SetPropertyValue<decimal>(nameof(Precio_compra), ref fPrecio_compra, value); }
+        }
+        decimal fPrecio_venta;
+        public decimal Precio_venta
+        {
+            get { return fPrecio_venta; }
+            set { SetPropertyValue<decimal>(nameof(Precio_venta), ref fPrecio_venta, value); }
+        }
         [Association(@"DetalleventaReferencesProductos")]
         public XPCollection<Detalleventa> Detalleventas { get { return GetCollection<Detalleventa>(nameof(Detalleventas)); } }
     }
